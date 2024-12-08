@@ -1,56 +1,44 @@
 package main
 
-import "fmt"
-
+import (
+	"fmt"
+	"sort"
+	"strings"
+)
 
 func main(){
-	// have to have the types on both sides and the 3 is the length you expect
-	// arrays must be fixed lengths
-	// var ages [3]int = [3]int {20, 25 ,30}
+	greeting:= "Hello there friends!"
 
-	// shorthand
-	var ages = [3]int{20, 25 ,30}
+	fmt.Println(strings.Contains(greeting, "Hello"))
 
-	names := [4]string{"Yoshi", "Mario", "Peach", "Bowser"}
+	// strings method do not mutate original string
+	fmt.Println(strings.ReplaceAll(greeting, "Hello", "Hi"))
 
-	//change value in array
-	names[1] = "Luigi"
+	fmt.Println(strings.ToUpper(greeting))
+	fmt.Println(strings.Index(greeting, "ll"))
 
-	// print out the ages and the length of the array with the len func
-	fmt.Println(ages, len(ages))
-	fmt.Println(names, len(names))
+	// get slice of three elements
+	fmt.Println(strings.Split(greeting, " "))
 
-	// Slices
-	// More like arrays in other languages and not fixed length
-	// use arrays under the hood but more flexible
+	ages:=[]int{45, 20 , 35, 75, 60 ,50, 25}
 
-	// this is now a slice
-	var scores = []int{100, 50, 60}
+	// mutates the ages
+	sort.Ints(ages)
 
-	// update value at index
-	scores[2] = 25
-	// append to a slice
-	// this does not mutate the original array but instead returns a new variable, so have to overwrite the variable
-	scores = append(scores, 60)
+	fmt.Println(ages)
 
-	fmt.Println(scores, len(scores))
+	// return the 
+	// If the value is not found, it returns the index where the value would be inserted to maintain the sorted order.
+	index:= sort.SearchInts(ages, 1)
 
-	// slice ranges
+	fmt.Println(index)
 
-	rangeOne := names[1:3]
+	names:= []string{"yoshi", "mario", "peach", "bowser", "luigi"}
 
-	// go to from position two and go to end of the slice
-	rangeTwo:= names[2:]
+	//sort also mutates the original array and sorts it
+	sort.Strings(names)
+	fmt.Println(names)
 
-	// go from beginning of array/slice until the 3rd position
-	rangeThree:= names[:3]
-
-	fmt.Println(rangeOne)
-	fmt.Println(rangeTwo)
-	fmt.Println(rangeThree)
-
-	// append to a range
-	rangeOne = append(rangeOne, "Koopa")
-
-	fmt.Println(rangeOne)
+	// should give us the position of bowser but if it does not exist it will give the position where it should be
+	fmt.Println(sort.SearchStrings(names, "bowser"))
 }
