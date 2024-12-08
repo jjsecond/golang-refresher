@@ -2,34 +2,55 @@ package main
 
 import "fmt"
 
-func main() {
-	age := 35
-	name := "shaun"
 
-	fmt.Print("hello, ")
-	fmt.Print("my friend, ")
-	fmt.Print("you! \n")
+func main(){
+	// have to have the types on both sides and the 3 is the length you expect
+	// arrays must be fixed lengths
+	// var ages [3]int = [3]int {20, 25 ,30}
 
-	fmt.Println("My age is",age, "and my name is", name)
+	// shorthand
+	var ages = [3]int{20, 25 ,30}
 
-	// formatted strings. Order matters and using a format specifier
-	// %v means out put variable in default format, lots of different format specifiers
-	fmt.Printf("My age is %v and my names is %v. \n", age, name)
-	// puts quotes around them but should be used on strings. Will use a hash in place of the number. Would work with the age if it was a string
-	fmt.Printf("My age is %q and my names is %q. \n", age, name)
+	names := [4]string{"Yoshi", "Mario", "Peach", "Bowser"}
 
-	// get type of variable with format specifier  %T
-	fmt.Printf("ages is of type %T \n", age)
+	//change value in array
+	names[1] = "Luigi"
 
-	// using floats
-	fmt.Printf("You scored %f point ! \n", 255.55)
-	// can round them down
-	fmt.Printf("You scored %0.1f point ! \n", 255.55)
+	// print out the ages and the length of the array with the len func
+	fmt.Println(ages, len(ages))
+	fmt.Println(names, len(names))
 
-	// Sprintf (save formatted strings)
-	// returns formatted string and save it in a var
-	var str = fmt.Sprintf("My age is %v and my names is %v. \n", age, name)
-	fmt.Println("the saved string is:", str)
+	// Slices
+	// More like arrays in other languages and not fixed length
+	// use arrays under the hood but more flexible
 
+	// this is now a slice
+	var scores = []int{100, 50, 60}
 
+	// update value at index
+	scores[2] = 25
+	// append to a slice
+	// this does not mutate the original array but instead returns a new variable, so have to overwrite the variable
+	scores = append(scores, 60)
+
+	fmt.Println(scores, len(scores))
+
+	// slice ranges
+
+	rangeOne := names[1:3]
+
+	// go to from position two and go to end of the slice
+	rangeTwo:= names[2:]
+
+	// go from beginning of array/slice until the 3rd position
+	rangeThree:= names[:3]
+
+	fmt.Println(rangeOne)
+	fmt.Println(rangeTwo)
+	fmt.Println(rangeThree)
+
+	// append to a range
+	rangeOne = append(rangeOne, "Koopa")
+
+	fmt.Println(rangeOne)
 }
