@@ -10,7 +10,7 @@ func stingFormattingOne() {
 	fmt.Print("my friend, ")
 	fmt.Print("you! \n")
 
-	fmt.Println("My age is",age, "and my name is", name)
+	fmt.Println("My age is", age, "and my name is", name)
 
 	// formatted strings. Order matters and using a format specifier
 	// %v means out put variable in default format, lots of different format specifiers
@@ -30,6 +30,5 @@ func stingFormattingOne() {
 	// returns formatted string and save it in a var
 	var str = fmt.Sprintf("My age is %v and my names is %v. \n", age, name)
 	fmt.Println("the saved string is:", str)
-
 
 }

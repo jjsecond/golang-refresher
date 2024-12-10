@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func stringFloats(){
+func stringFloats() {
 	// different ways to define
 	var nameOne string = "mario"
 	var nameTwo = "Luigi"
@@ -21,7 +21,7 @@ func stringFloats(){
 	fmt.Println(nameFour)
 
 	// ints
-	var ageOne int =20
+	var ageOne int = 20
 	var ageTwo = 30
 	ageThree := 40
 
@@ -36,7 +36,7 @@ func stringFloats(){
 
 	// can't have negative number with unit
 	// var numThree uint8 = -1
-	var numThree uint8 = 255 
+	var numThree uint8 = 255
 
 	fmt.Println(numOne, numTwo, numThree)
 
@@ -45,7 +45,7 @@ func stringFloats(){
 	var scoreOne float32 = 25.69
 	var scoreTwo float64 = 8882843879238429738479.7
 	// defaults to float64
-	scoreThree :=1.5
+	scoreThree := 1.5
 
 	fmt.Println(scoreOne, scoreTwo, scoreThree)
 }

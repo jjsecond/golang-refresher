@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func loops(){
+func loops() {
 	// x :=0
 
 	// for x < 5 {
@@ -10,25 +10,24 @@ func loops(){
 	// 	x++
 	// }
 
-	for i :=0; i < 5; i++ {
+	for i := 0; i < 5; i++ {
 		fmt.Println("value of x is:", i)
 	}
 
-	names:=[]string{"mario", "luigi", "yoshi", "peach"}
+	names := []string{"mario", "luigi", "yoshi", "peach"}
 
-	for i :=0 ; i < len(names);i++{
+	for i := 0; i < len(names); i++ {
 		fmt.Println(names[i])
 	}
 
 	// like for in to get the index and value
-	for index, value := range names{
+	for index, value := range names {
 		fmt.Printf("Position at index %v and the value is %v \n", index, value)
 	}
 
-
 	// if we don't want the index we can use _
 	// value is a local copy of the variable
-	for _, value := range names{
+	for _, value := range names {
 		fmt.Printf("The value is %v \n", value)
 
 		// we cannot update the values like this

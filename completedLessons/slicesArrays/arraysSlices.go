@@ -2,14 +2,13 @@ package main
 
 import "fmt"
 
-
-func arraysSlices(){
+func arraysSlices() {
 	// have to have the types on both sides and the 3 is the length you expect
 	// arrays must be fixed lengths
 	// var ages [3]int = [3]int {20, 25 ,30}
 
 	// shorthand
-	var ages = [3]int{20, 25 ,30}
+	var ages = [3]int{20, 25, 30}
 
 	names := [4]string{"Yoshi", "Mario", "Peach", "Bowser"}
 
@@ -40,10 +39,10 @@ func arraysSlices(){
 	rangeOne := names[1:3]
 
 	// go to from position two and go to end of the slice
-	rangeTwo:= names[2:]
+	rangeTwo := names[2:]
 
 	// go from beginning of array/slice until the 3rd position
-	rangeThree:= names[:3]
+	rangeThree := names[:3]
 
 	fmt.Println(rangeOne)
 	fmt.Println(rangeTwo)

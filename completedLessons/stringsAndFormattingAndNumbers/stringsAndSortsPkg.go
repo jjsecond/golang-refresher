@@ -6,8 +6,8 @@ import (
 	"strings"
 )
 
-func stringsAndSortsPkg(){
-	greeting:= "Hello there friends!"
+func stringsAndSortsPkg() {
+	greeting := "Hello there friends!"
 
 	fmt.Println(strings.Contains(greeting, "Hello"))
 
@@ -20,20 +20,20 @@ func stringsAndSortsPkg(){
 	// get slice of three elements
 	fmt.Println(strings.Split(greeting, " "))
 
-	ages:=[]int{45, 20 , 35, 75, 60 ,50, 25}
+	ages := []int{45, 20, 35, 75, 60, 50, 25}
 
 	// mutates the ages
 	sort.Ints(ages)
 
 	fmt.Println(ages)
 
-	// return the 
+	// return the
 	// If the value is not found, it returns the index where the value would be inserted to maintain the sorted order.
-	index:= sort.SearchInts(ages, 1)
+	index := sort.SearchInts(ages, 1)
 
 	fmt.Println(index)
 
-	names:= []string{"yoshi", "mario", "peach", "bowser", "luigi"}
+	names := []string{"yoshi", "mario", "peach", "bowser", "luigi"}
 
 	//sort also mutates the original array and sorts it
 	sort.Strings(names)

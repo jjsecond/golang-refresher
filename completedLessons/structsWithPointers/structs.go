@@ -4,8 +4,8 @@ import (
 	"fmt"
 )
 
-func main(){
-	myBill:= newBill("John's bill")
+func main() {
+	myBill := newBill("John's bill")
 
 	myBill.addItem("onion soup", 4.50)
 	myBill.addItem("chicken sandwich", 8.25)

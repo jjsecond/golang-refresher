@@ -10,6 +10,9 @@ To gain an understanding of Go.
 - go version
 - go run <file.go>
 
+### Format
+- gofmt -w . 
+
 
 ### Int types
 
@@ -40,3 +43,6 @@ uint8: Range is 0 to 255.
 uint16: Range is 0 to 65,535.
 uint32: Range is 0 to 4,294,967,295.
 uint64: Range is 0 to 18,446,744,073,709,551,615.
+
+
+
